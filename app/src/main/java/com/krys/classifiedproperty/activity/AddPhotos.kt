@@ -802,6 +802,6 @@ class AddPhotos : AppCompatActivity(),ProgressRequestBody.UploadCallbacks {
         return mediaStorageDir.getAbsolutePath() + "/" + mImageName
     }
 
-
+///this is comment
 
 }
