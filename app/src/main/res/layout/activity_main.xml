@@ -1,0 +1,605 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".activity.OTPandCreateProfile">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:visibility="gone"
+            android:src="@drawable/bgbehind">
+        </ImageView>
+
+        <RelativeLayout
+            android:visibility="visible"
+            android:id="@+id/layforpass"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white">
+
+            <ImageView
+                android:id="@+id/imagelogo1"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="80dp"
+                android:background="@drawable/passwordlogo"
+                android:tint="@android:color/white"></ImageView>
+
+            <TextView
+                android:id="@+id/ti"
+                android:layout_marginTop="45dp"
+                android:layout_marginStart="48dp"
+                android:layout_below="@+id/imagelogo1"
+                android:fontFamily="@font/gilroy_bold"
+                android:text="@string/password"
+                android:textColor="@color/black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+            </TextView>
+
+            <TextView
+                android:id="@+id/text1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ti"
+                android:layout_centerHorizontal="true"
+                android:visibility="gone"
+                android:fontFamily="@font/gilroy_regular"
+                android:text="@string/enterpass"
+                android:textColor="@android:color/white"
+                android:textSize="20dp"></TextView>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_marginStart="45dp"
+                android:layout_marginEnd="45dp"
+                android:layout_marginTop="5dp"
+                android:layout_below="@+id/ti"
+                android:id="@+id/layoutTextInput"
+                android:layout_width="match_parent"
+                app:passwordToggleEnabled="true"
+                app:passwordToggleTint="@color/grey"
+                android:layout_height="wrap_content"
+                app:hintEnabled="false"
+                android:textColorHint="@color/grey">
+                <EditText
+                    android:id="@+id/edtpass"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_below="@+id/ti"
+                    android:imeOptions="actionNext"
+                    android:fontFamily="@font/gilroy_medium"
+                    android:drawableStart="@drawable/passlock"
+                    android:drawableTint="@color/grey"
+                    android:hint="@string/enterpass"
+                    android:textColorHint="@color/grey"
+                    android:inputType="textPassword"
+                    android:paddingStart="5dp"
+                    android:drawablePadding="8dp"
+                    android:background="@drawable/edtback"
+                    android:textColor="@android:color/black"
+                    android:textSize="15dp">
+                </EditText>
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+
+            <TextView
+                android:id="@+id/text5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/layoutTextInput"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="45dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="45dp"
+                android:visibility="gone"
+                android:fontFamily="@font/gilroy_regular"
+                android:text="@string/quote"
+                android:textAlignment="center"
+                android:textColor="@android:color/white"></TextView>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/text5"
+                android:layout_alignParentBottom="true">
+
+                <RelativeLayout
+                    android:id="@+id/progresslay"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="24dp"
+                    android:visibility="visible"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|right"
+                    app:layout_anchorGravity="bottom|right|end">
+
+                    <ProgressBar
+                        android:id="@+id/fabProgress"
+                        style="?android:attr/progressBarStyleLarge"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:visibility="invisible"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerInParent="true"
+                        android:indeterminateTint="@color/yellow" />
+
+                    <com.google.android.material.floatingactionbutton.FloatingActionButton
+                        android:id="@+id/nextbtnpass"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:tint="@color/white"
+                        app:backgroundTint="@color/colorPrimary"
+                        app:srcCompat="@drawable/ic_navigate_next_black_24dp"
+                        android:layout_centerInParent="true" />
+
+                </RelativeLayout>
+                <TextView
+                    android:id="@+id/forgotpass"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/progresslay"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginStart="45dp"
+                    android:layout_marginTop="25dp"
+                    android:layout_marginEnd="45dp"
+                    android:textSize="16dp"
+                    android:fontFamily="@font/gilroy_bold"
+                    android:text="@string/forgotpass"
+                    android:textAlignment="center"
+                    android:textColor="@android:color/black"></TextView>
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="45dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="45dp"
+                android:layout_marginBottom="20dp"
+                android:fontFamily="@font/gilroy_regular"
+                android:text="@string/allrights"
+                android:textAlignment="center"
+                android:textSize="11dp"></TextView>
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:visibility="gone"
+            android:id="@+id/layforotp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white">
+
+            <ImageView
+                android:id="@+id/imagelogo12"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="80dp"
+                android:background="@drawable/otplogo"></ImageView>
+
+            <TextView
+                android:id="@+id/tiq"
+                android:layout_marginTop="45dp"
+                android:layout_marginStart="48dp"
+                android:layout_below="@+id/imagelogo12"
+                android:fontFamily="@font/gilroy_bold"
+                android:text="OTP Verification"
+                android:visibility="invisible"
+                android:textColor="@color/black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+            </TextView>
+
+            <TextView
+                android:id="@+id/text12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/imagelogo12"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="30dp"
+                android:visibility="gone"
+                android:fontFamily="@font/gilroy_regular"
+                android:text="@string/enterotp"
+                android:textColor="@android:color/white"
+                android:textSize="20dp"></TextView>
+
+            <com.goodiebag.pinview.Pinview
+                android:layout_below="@+id/tiq"
+                android:id="@+id/pinview"
+                style="@style/PinView"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginTop="5dp"
+                android:theme="@style/PinView"
+                app:hint=""
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                app:cursorVisible="true"
+                app:forceKeyboard="false"
+                app:inputType="number"
+                app:pinBackground="@drawable/pinselect"
+                app:password="false"
+                app:pinHeight="45dp"
+                app:pinLength="4"
+                app:pinWidth="45dp"
+                app:textSize="7dp" />
+
+            <EditText
+                android:id="@+id/edtotp"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_below="@+id/tiq"
+                android:layout_marginStart="45dp"
+                android:visibility="gone"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="45dp"
+                android:background="@drawable/edtback"
+                android:drawableTint="@color/grey"
+                android:fontFamily="@font/gilroy_medium"
+                android:gravity="center"
+                android:hint="Enter 4 digit pin"
+                android:textColorHint="@color/grey"
+                android:inputType="number"
+                android:maxLength="10"
+                android:textAlignment="center"
+                android:textColor="@android:color/black"
+                android:textSize="15dp"></EditText>
+
+            <TextView
+                android:id="@+id/text51"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/imagelogo12"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="45dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="45dp"
+                android:fontFamily="@font/gilroy_regular"
+                android:text="@string/otptext"
+                android:textAlignment="center"
+                android:textColor="@android:color/black"></TextView>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/pinview"
+                android:layout_alignParentBottom="true">
+
+                <RelativeLayout
+                    android:id="@+id/progresslayforotp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="24dp"
+                    android:visibility="visible"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|right"
+                    app:layout_anchorGravity="bottom|right|end">
+
+                    <ProgressBar
+                        android:id="@+id/fabProgressotp"
+                        style="?android:attr/progressBarStyleLarge"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:visibility="invisible"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerInParent="true"
+                        android:indeterminateTint="@color/yellow" />
+
+                    <com.google.android.material.floatingactionbutton.FloatingActionButton
+                        android:id="@+id/nextbtnotp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:tint="@color/white"
+                        android:visibility="invisible"
+                        app:backgroundTint="@color/colorPrimary"
+                        app:srcCompat="@drawable/ic_navigate_next_black_24dp"
+                        android:layout_centerInParent="true" />
+
+                </RelativeLayout>
+                <TextView
+                    android:id="@+id/resend"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/progresslayforotp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginStart="45dp"
+                    android:layout_marginTop="25dp"
+                    android:layout_marginEnd="45dp"
+                    android:textSize="16dp"
+                    android:fontFamily="@font/gilroy_bold"
+                    android:text="@string/resend"
+                    android:textAlignment="center"
+                    android:textColor="@android:color/black"></TextView>
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/text6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="45dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="45dp"
+                android:layout_marginBottom="20dp"
+                android:fontFamily="@font/gilroy_regular"
+                android:text="@string/allrights"
+                android:textAlignment="center"
+                android:textSize="11dp"></TextView>
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:visibility="gone"
+            android:id="@+id/layforcreate"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white">
+
+            <ImageView
+                android:id="@+id/imagelogo13"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="@drawable/accountlogo"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="80dp"></ImageView>
+
+            <TextView
+                android:id="@+id/tiaq"
+                android:layout_marginTop="45dp"
+                android:layout_marginStart="48dp"
+                android:layout_below="@+id/imagelogo13"
+                android:fontFamily="@font/gilroy_bold"
+                android:text="@string/name"
+                android:textColor="@color/black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+            </TextView>
+
+            <TextView
+                android:id="@+id/text13"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/imagelogo13"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="30dp"
+                android:visibility="gone"
+                android:fontFamily="@font/gilroy_regular"
+                android:text="@string/createprofile"
+                android:textColor="@android:color/white"
+                android:textSize="20dp"></TextView>
+
+            <EditText
+                android:id="@+id/edtnumdisplay"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_below="@+id/tiaq"
+                android:layout_marginStart="45dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="45dp"
+                android:background="@drawable/edtback"
+                android:drawableTint="@color/grey"
+                android:drawableLeft="@drawable/account"
+                android:paddingStart="5dp"
+                android:drawablePadding="8dp"
+                android:fontFamily="@font/gilroy_medium"
+                android:hint="@string/enternamehere"
+                android:textColorHint="@color/grey"
+                android:inputType="textCapWords"
+                android:textColor="@android:color/black"
+                android:textSize="15dp"></EditText>
+
+            <TextView
+                android:id="@+id/tiaq1"
+                android:layout_marginTop="5dp"
+                android:layout_marginStart="48dp"
+                android:layout_below="@+id/edtnumdisplay"
+                android:fontFamily="@font/gilroy_bold"
+                android:text="@string/password"
+                android:textColor="@color/black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+            </TextView>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_marginStart="45dp"
+                android:layout_marginEnd="45dp"
+                android:layout_marginTop="5dp"
+                android:layout_below="@+id/tiaq1"
+                android:id="@+id/layoutTextInput2"
+                android:layout_width="match_parent"
+                app:passwordToggleEnabled="true"
+                app:passwordToggleTint="@color/grey"
+                android:layout_height="wrap_content"
+                app:hintEnabled="false"
+                android:background="@android:color/transparent"
+                android:textColorHint="@color/grey">
+                <EditText
+                    android:id="@+id/edtpassforcreate"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_below="@+id/ti"
+                    android:background="@drawable/edtback"
+                    android:fontFamily="@font/gilroy_medium"
+                    android:drawableTint="@color/grey"
+                    android:drawableStart="@drawable/passlock"
+                    android:hint="@string/enterpass"
+                    android:textColorHint="@color/grey"
+                    android:paddingStart="5dp"
+                    android:drawablePadding="8dp"
+                    android:inputType="textPassword"
+                    android:maxLength="10"
+                    android:textColor="@android:color/black"
+                    android:textSize="15dp">
+                </EditText>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/tiaq2"
+                android:layout_marginTop="5dp"
+                android:layout_marginStart="48dp"
+                android:layout_below="@+id/layoutTextInput2"
+                android:fontFamily="@font/gilroy_bold"
+                android:text="@string/dob"
+                android:textColor="@color/black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+            </TextView>
+            <TextView
+                android:id="@+id/edtconpassforcreate"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_below="@+id/tiaq2"
+                android:layout_marginStart="45dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="45dp"
+                android:background="@drawable/edtback"
+                android:drawablePadding="8dp"
+                android:paddingStart="5dp"
+                android:drawableTint="@color/grey"
+                android:drawableLeft="@drawable/datelogo"
+                android:fontFamily="@font/gilroy_medium"
+                android:gravity="start|center"
+                android:hint="@string/dobenter"
+                android:textColorHint="@color/grey"
+                android:textColor="@android:color/black"
+                android:textSize="15dp">
+            </TextView>
+
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/text53"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/edtconpassforcreate"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="45dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="45dp"
+                android:fontFamily="@font/gilroy_regular"
+                android:text="@string/quote"
+                android:textAlignment="center"
+                android:textColor="@android:color/white"></TextView>
+            <TextView
+                android:id="@+id/tiaq3"
+                android:layout_marginTop="5dp"
+                android:layout_marginStart="48dp"
+                android:layout_below="@+id/edtconpassforcreate"
+                android:fontFamily="@font/gilroy_bold"
+                android:text="@string/gender"
+                android:textColor="@color/black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+            </TextView>
+            <LinearLayout
+                android:weightSum="2"
+                android:id="@+id/gender"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_below="@+id/tiaq3"
+                android:layout_marginStart="45dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="45dp"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_marginEnd="5dp"
+                    android:layout_weight="1"
+                    android:id="@+id/male"
+                    android:text="Male"
+                    android:background="@drawable/radiouncheck"
+                    android:fontFamily="@font/gilroy_medium"
+                    android:gravity="center"
+                    android:drawableTint="@color/grey"
+
+                    android:textColor="@color/black"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                </TextView>
+                <TextView
+                    android:layout_marginStart="5dp"
+                    android:layout_weight="1"
+                    android:id="@+id/female"
+                    android:text="Female"
+                    android:drawableTint="@color/grey"
+                    android:background="@drawable/radiouncheck"
+                    android:fontFamily="@font/gilroy_medium"
+                    android:gravity="center"
+                    android:textColor="@color/black"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                </TextView>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/gender"
+                android:layout_alignParentBottom="true">
+
+                <RelativeLayout
+                    android:id="@+id/progresslaycreate"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="14dp"
+                    android:visibility="visible"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|right"
+                    app:layout_anchorGravity="bottom|right|end">
+
+                    <ProgressBar
+                        android:id="@+id/fabProgresscreate"
+                        style="?android:attr/progressBarStyleLarge"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:visibility="invisible"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerInParent="true"
+                        android:indeterminateTint="@color/yellow" />
+
+                    <com.google.android.material.floatingactionbutton.FloatingActionButton
+                        android:id="@+id/nextbtncreate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:tint="@color/white"
+                        app:backgroundTint="@color/colorPrimary"
+                        app:srcCompat="@drawable/ic_navigate_next_black_24dp"
+                        android:layout_centerInParent="true" />
+
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/text63"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="45dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="45dp"
+                android:layout_marginBottom="20dp"
+                android:fontFamily="@font/gilroy_regular"
+                android:text="@string/allrights"
+                android:textAlignment="center"
+                android:textSize="11dp"></TextView>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

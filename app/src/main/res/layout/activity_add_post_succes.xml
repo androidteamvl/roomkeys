@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".activity.AddPostSucces">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize">
+
+        <RelativeLayout
+            android:id="@+id/aaaq"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:layout_centerVertical="true"
+                android:id="@+id/back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_arrow_back_black_24dp" />
+
+            <TextView
+                android:layout_toEndOf="@+id/back"
+                android:id="@+id/mylocation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="10dp"
+                android:drawablePadding="12dp"
+                android:fontFamily="@font/gilroy_bold"
+                android:text="Success"
+                android:textColor="@android:color/black"
+                android:textSize="20dp" />
+
+        </RelativeLayout>
+
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="0.4dp"
+        android:layout_below="@+id/toolbar"
+        android:background="#3EADADAD"></View>
+
+    <RelativeLayout
+        android:layout_below="@+id/view"
+        android:layout_margin="12dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ImageView
+            android:layout_marginTop="35dp"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentTop="true"
+            android:scaleType="center"
+            android:id="@+id/gifsucess"
+            android:layout_width="100dp"
+            android:layout_height="100dp">
+        </ImageView>
+        <TextView
+            android:layout_below="@+id/gifsucess"
+            android:id="@+id/texaa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:layout_marginTop="25dp"
+            android:layout_marginBottom="12dp"
+            android:fontFamily="@font/gilroy_bold"
+            android:text="Add posted successfully"
+            android:textColor="@color/black"
+            android:textSize="20dp">
+        </TextView>
+        <ImageView
+            android:layout_below="@+id/texaa"
+            android:id="@+id/as"
+            android:layout_above="@+id/tectte"
+            android:src="@drawable/sucessbanner"
+            android:layout_width="wrap_content"
+            android:layout_height="100dp">
+        </ImageView>
+        <TextView
+            android:id="@+id/tectte"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/fabviewAdd"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:layout_marginTop="25dp"
+            android:layout_marginBottom="12dp"
+            android:fontFamily="@font/gilroy_bold"
+            android:text="View Ad."
+            android:textColor="@color/black"
+            android:textSize="20dp"></TextView>
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fabviewAdd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="22dp"
+            android:tint="@android:color/white"
+            app:srcCompat="@drawable/viewadd"></com.google.android.material.floatingactionbutton.FloatingActionButton>
+    </RelativeLayout>
+
+</RelativeLayout>

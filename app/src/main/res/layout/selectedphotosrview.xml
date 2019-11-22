@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/maincontainer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:elevation="6dp"
+            app:cardCornerRadius="4dp"
+            android:background="#bddfdf9c"
+            android:layout_height="220dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#bda7a7a4"
+                android:weightSum="10"
+                android:id="@+id/rw"
+                android:orientation="vertical">
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="5"
+                    android:layout_margin="2dp"
+                    android:id="@+id/selimage"
+                    android:scaleType="centerCrop"/>
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="5"
+                    android:visibility="gone"
+                    android:layout_margin="2dp"
+                    android:id="@+id/coverimage"
+                    android:scaleType="centerCrop"/>
+
+                <ImageView
+                    android:layout_alignParentEnd="true"
+                    android:backgroundTint="@color/white"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginRight="6dp"
+                    android:background="@drawable/cancel"
+                    android:layout_alignEnd="@+id/image"
+                    android:id="@+id/imagecancel" />
+
+<!--                <RelativeLayout-->
+<!--                    android:id="@+id/addmoreimage"-->
+<!--                    android:layout_centerInParent="true"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content">-->
+<!--                    <ImageView-->
+<!--                        android:layout_centerHorizontal="true"-->
+<!--                        android:backgroundTint="@color/white"-->
+<!--                        android:layout_width="55dp"-->
+<!--                        android:layout_height="55dp"-->
+<!--                        android:background="@drawable/addmore"-->
+<!--                        android:id="@+id/imageAdd" />-->
+
+<!--                    <TextView-->
+<!--                        android:textColor="@color/white"-->
+<!--                        android:layout_marginTop="5dp"-->
+<!--                        android:fontFamily="@font/gilroy_bold"-->
+<!--                        android:layout_centerHorizontal="true"-->
+<!--                        android:layout_below="@+id/imageAdd"-->
+<!--                        android:text="Add more"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content">-->
+<!--                    </TextView>-->
+<!--                </RelativeLayout>-->
+
+
+
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+    </RelativeLayout>
+
+
+</LinearLayout>

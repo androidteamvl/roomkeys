@@ -1,0 +1,829 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    app:layout_scrollFlags="scroll"
+    tools:context=".activity.PropertyDetails">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/headerlay"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:fitsSystemWindows="true">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:cardCornerRadius="4dp"
+                        app:cardElevation="6dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <ImageView
+                                android:id="@+id/pager"
+                                android:scaleType="centerCrop"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentTop="true" />
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:layout_alignParentBottom="true"
+                                app:cardBackgroundColor="@android:color/transparent"
+                                app:cardCornerRadius="4dp">
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="35dp"
+                                    android:background="#A68B8B8B">
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:drawableLeft="@drawable/photos"
+                                        android:drawablePadding="8dp"
+                                        android:drawableTint="@color/white"
+                                        android:fontFamily="@font/gilroy_bold"
+                                        android:gravity="center"
+                                        android:paddingStart="@dimen/_10sdp"
+                                        android:paddingEnd="10dp"
+                                        android:text="9+ More"
+                                        android:textColor="@color/white"></TextView>
+                                </LinearLayout>
+                            </androidx.cardview.widget.CardView>
+                        </RelativeLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.appcompat.widget.Toolbar
+                        android:id="@+id/toolbar"
+                        android:layout_width="match_parent"
+                        android:layout_height="?attr/actionBarSize"
+                        android:elevation="7dp">
+
+                        <RelativeLayout
+                            android:id="@+id/as"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <ImageView
+                                android:id="@+id/back"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:background="@drawable/ic_arrow_back_black_24dp"
+                                android:backgroundTint="@color/white" />
+                        </RelativeLayout>
+
+
+                    </androidx.appcompat.widget.Toolbar>
+                    <!--        <View-->
+                    <!--            android:id="@+id/view"-->
+                    <!--            android:layout_below="@+id/toolbar"-->
+                    <!--            android:layout_width="match_parent"-->
+                    <!--            android:layout_height="0.4dp"-->
+                    <!--            android:background="#3EADADAD">-->
+                    <!--        </View>-->
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/headerlay"
+                    android:orientation="vertical">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="12dp"
+                        app:cardCornerRadius="4dp"
+                        app:cardElevation="6dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="10dp">
+
+                                <TextView
+                                    android:id="@+id/text1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/gilroy_bold"
+                                    android:text="Green Home Society"
+                                    android:textColor="@android:color/black"
+                                    android:textSize="18dp"></TextView>
+
+                                <TextView
+                                    android:id="@+id/text3"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/text1"
+                                    android:layout_marginStart="2dp"
+                                    android:layout_marginTop="3dp"
+                                    android:layout_toEndOf="@+id/img"
+                                    android:ellipsize="end"
+                                    android:fontFamily="@font/gilroy_medium"
+                                    android:text="Ram Vihar Colony, Jaipur"></TextView>
+
+                                <TextView
+                                    android:id="@+id/text4"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentEnd="true"
+                                    android:ellipsize="end"
+                                    android:fontFamily="@font/gilroy_medium"
+                                    android:text="Rs. 25 Lac"
+                                    android:textColor="@android:color/black"></TextView>
+                            </RelativeLayout>
+                        </RelativeLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginEnd="12dp"
+                        app:cardCornerRadius="4dp"
+                        app:cardElevation="6dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="10dp">
+
+                                <TextView
+                                    android:id="@+id/txt"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/gilroy_bold"
+                                    android:text="Overview"
+                                    android:textColor="@android:color/black"
+                                    android:textSize="18dp"></TextView>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/txt"
+                                    android:orientation="vertical">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="12dp"
+                                        android:orientation="horizontal"
+                                        android:weightSum="2">
+
+                                        <TextView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:fontFamily="@font/gilroy_medium"
+                                            android:text="Area"
+                                            android:textColor="@color/black"></TextView>
+
+                                        <TextView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:text="2400 sq ft."></TextView>
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="12dp"
+                                        android:orientation="horizontal"
+                                        android:weightSum="2">
+
+                                        <TextView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:fontFamily="@font/gilroy_medium"
+                                            android:text="Monthly Reent"
+                                            android:textColor="@color/black"></TextView>
+
+                                        <TextView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:text="Rs. 2500/month"></TextView>
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="12dp"
+                                        android:orientation="horizontal"
+                                        android:weightSum="2">
+
+                                        <TextView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:fontFamily="@font/gilroy_medium"
+                                            android:text="Security Deposit"
+                                            android:textColor="@color/black"></TextView>
+
+                                        <TextView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:text="Only 1 month rent"></TextView>
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="12dp"
+                                        android:orientation="horizontal"
+                                        android:weightSum="2">
+
+                                        <TextView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:fontFamily="@font/gilroy_medium"
+                                            android:text="Services"
+                                            android:textColor="@color/black"></TextView>
+
+                                        <TextView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:text="on actuals"></TextView>
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="12dp"
+                                        android:orientation="horizontal"
+                                        android:weightSum="2">
+
+                                        <TextView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:fontFamily="@font/gilroy_medium"
+                                            android:text="Monthly Maintenance charges"
+                                            android:textColor="@color/black"></TextView>
+
+                                        <TextView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:text="Rs. 199*"></TextView>
+                                    </LinearLayout>
+
+                                </LinearLayout>
+                            </RelativeLayout>
+                        </RelativeLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginEnd="12dp"
+                        app:cardCornerRadius="4dp"
+                        app:cardElevation="6dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="10dp">
+
+                                <TextView
+                                    android:id="@+id/text12"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/gilroy_bold"
+                                    android:text="Want to know more about Green Home Society ?"
+                                    android:textColor="@android:color/black"
+                                    android:textSize="18dp"></TextView>
+
+                                <TextView
+                                    android:id="@+id/text3a"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/text12"
+                                    android:layout_marginStart="2dp"
+                                    android:layout_marginTop="3dp"
+                                    android:layout_toEndOf="@+id/img"
+                                    android:ellipsize="end"
+                                    android:fontFamily="@font/gilroy_medium"
+                                    android:text="Looking for a spacious 1 R fully_furnished apartment for boys and girls at an affordable price in Hbr Layout, Bangalore? Then, this is right one for you. This house has a floor size of 400 sq.ft which features one bedroom and one bathroom, priced at ₹18000 per bed. This house features Gas stove, Fridge, Sofa, Tv, Dishtv connection, and Internet and more. You need to put down an initial 1 months’ security deposit of ₹18000, it is great value for money. Book now before somebody else does!"></TextView>
+                            </RelativeLayout>
+                        </RelativeLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginEnd="12dp"
+                        app:cardCornerRadius="4dp"
+                        app:cardElevation="6dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="10dp">
+
+                                <TextView
+                                    android:id="@+id/tvhead"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/gilroy_bold"
+                                    android:text="Report if something is wrong in the Ad."
+                                    android:textColor="@android:color/black"
+                                    android:textSize="18dp"></TextView>
+
+                                <com.google.android.material.chip.ChipGroup
+                                    android:id="@+id/chipGroup"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/tvhead"
+                                    android:layout_marginTop="8dp"
+                                    android:layout_marginBottom="8dp">
+
+                                    <com.google.android.material.chip.Chip
+                                        android:id="@+id/chip6"
+                                        style="@style/CustomChipChoice"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Fire"
+                                        android:textColor="@color/textselector"
+                                        app:chipBackgroundColor="@color/chipselector" />
+
+                                    <com.google.android.material.chip.Chip
+                                        android:id="@+id/chip7"
+                                        style="@style/CustomChipChoice"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Water"
+                                        android:textColor="@color/textselector"
+                                        app:chipBackgroundColor="@color/chipselector" />
+
+                                    <com.google.android.material.chip.Chip
+                                        android:id="@+id/chip8"
+                                        style="@style/CustomChipChoice"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Psychic"
+                                        android:textColor="@color/textselector"
+                                        app:chipBackgroundColor="@color/chipselector" />
+
+                                    <com.google.android.material.chip.Chip
+                                        style="@style/CustomChipChoice"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Fire"
+                                        android:textColor="@color/textselector"
+                                        app:chipBackgroundColor="@color/chipselector" />
+
+                                    <com.google.android.material.chip.Chip
+                                        style="@style/CustomChipChoice"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Water"
+                                        android:textColor="@color/textselector"
+                                        app:chipBackgroundColor="@color/chipselector" />
+
+                                    <com.google.android.material.chip.Chip
+                                        style="@style/CustomChipChoice"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Psychic"
+                                        android:textColor="@color/textselector"
+                                        app:chipBackgroundColor="@color/chipselector" />
+
+                                    <com.google.android.material.chip.Chip
+                                        style="@style/CustomChipChoice"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Fire"
+                                        android:textColor="@color/textselector"
+                                        app:chipBackgroundColor="@color/chipselector" />
+
+                                    <com.google.android.material.chip.Chip
+                                        style="@style/CustomChipChoice"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Water"
+                                        android:textColor="@color/textselector"
+                                        app:chipBackgroundColor="@color/chipselector" />
+
+                                    <com.google.android.material.chip.Chip
+                                        style="@style/CustomChipChoice"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Psychic"
+                                        android:textColor="@color/textselector"
+                                        app:chipBackgroundColor="@color/chipselector" />
+                                </com.google.android.material.chip.ChipGroup>
+                            </RelativeLayout>
+                        </RelativeLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <RelativeLayout
+                        android:id="@+id/abn"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/newcard"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginEnd="8dp"
+                        android:background="@drawable/layborder">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_margin="12dp"
+                            android:fontFamily="@font/gilroy_bold"
+                            android:text="Similiar Ads."
+                            android:textColor="@android:color/black"
+                            android:textSize="15dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:layout_margin="12dp"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/btnborder"
+                            android:fontFamily="@font/gilroy_bold"
+                            android:paddingStart="10dp"
+                            android:paddingTop="5dp"
+                            android:paddingEnd="10dp"
+                            android:paddingBottom="5dp"
+                            android:text="See all"
+                            android:textColor="@color/red"
+                            android:textSize="11dp"
+                            android:visibility="gone" />
+                    </RelativeLayout>
+
+                    <HorizontalScrollView
+                        android:id="@+id/scroll2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginEnd="12dp"
+                        android:layout_marginBottom="60dp"
+                        android:scrollbars="none">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <RelativeLayout
+                                android:id="@+id/click"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <ImageView
+                                    android:layout_width="160dp"
+                                    android:layout_height="150dp"
+                                    android:scaleType="centerCrop"
+                                    android:src="@drawable/bgbehind"></ImageView>
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="88dp">
+
+                                    <androidx.cardview.widget.CardView
+                                        android:layout_width="152dp"
+                                        android:layout_height="80dp"
+                                        android:layout_marginStart="4dp"
+                                        android:layout_marginEnd="4dp"
+                                        android:layout_marginBottom="10dp"
+                                        app:cardCornerRadius="4dp"
+                                        app:cardElevation="6dp">
+
+                                        <RelativeLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_margin="10dp">
+
+                                            <TextView
+                                                android:id="@+id/text112"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:fontFamily="@font/gilroy_bold"
+                                                android:text="Rs.25,000"
+                                                android:textColor="@android:color/black"></TextView>
+
+                                            <TextView
+                                                android:id="@+id/text212"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_below="@+id/text112"
+                                                android:ellipsize="end"
+                                                android:fontFamily="@font/gilroy_medium"
+                                                android:text="24 sq ft"
+                                                android:textColor="@color/black"></TextView>
+
+                                            <ImageView
+                                                android:id="@+id/img12"
+                                                android:layout_width="12dp"
+                                                android:layout_height="12dp"
+                                                android:layout_below="@+id/text212"
+                                                android:layout_marginStart="-3dp"
+                                                android:layout_marginTop="5dp"
+                                                android:tint="@color/yellow"
+                                                app:srcCompat="@drawable/room"></ImageView>
+
+                                            <TextView
+                                                android:id="@+id/text312"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_below="@+id/text212"
+                                                android:layout_marginStart="2dp"
+                                                android:layout_marginTop="3dp"
+                                                android:layout_toEndOf="@+id/img12"
+                                                android:ellipsize="end"
+                                                android:fontFamily="@font/gilroy_medium"
+                                                android:text="Jaipur"
+                                                android:textSize="10dp"></TextView>
+
+                                            <TextView
+                                                android:id="@+id/text412"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_below="@+id/text312"
+                                                android:layout_alignParentEnd="true"
+                                                android:layout_marginTop="25dp"
+                                                android:ellipsize="end"
+                                                android:fontFamily="@font/gilroy_medium"
+                                                android:text="More Details"
+                                                android:textColor="@android:color/black"
+                                                android:visibility="gone"></TextView>
+                                        </RelativeLayout>
+                                    </androidx.cardview.widget.CardView>
+                                </RelativeLayout>
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="12dp"
+                                android:orientation="vertical">
+
+                                <ImageView
+                                    android:layout_width="160dp"
+                                    android:layout_height="150dp"
+                                    android:scaleType="centerCrop"
+                                    android:src="@drawable/background"></ImageView>
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="88dp">
+
+                                    <androidx.cardview.widget.CardView
+                                        android:layout_width="152dp"
+                                        android:layout_height="80dp"
+                                        android:layout_marginStart="4dp"
+                                        android:layout_marginEnd="4dp"
+                                        android:layout_marginBottom="10dp"
+                                        app:cardCornerRadius="4dp"
+                                        app:cardElevation="6dp">
+
+                                        <RelativeLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_margin="10dp">
+
+                                            <TextView
+                                                android:id="@+id/text11223"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:fontFamily="@font/gilroy_bold"
+                                                android:text="Rs. 1 Lac"
+                                                android:textColor="@android:color/black"></TextView>
+
+                                            <TextView
+                                                android:id="@+id/text21223"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_below="@+id/text11223"
+                                                android:ellipsize="end"
+                                                android:fontFamily="@font/gilroy_medium"
+                                                android:text="120 sq ft"
+                                                android:textColor="@color/black"></TextView>
+
+                                            <ImageView
+                                                android:id="@+id/img1223"
+                                                android:layout_width="12dp"
+                                                android:layout_height="12dp"
+                                                android:layout_below="@+id/text21223"
+                                                android:layout_marginStart="-3dp"
+                                                android:layout_marginTop="5dp"
+                                                android:tint="@color/yellow"
+                                                app:srcCompat="@drawable/room"></ImageView>
+
+                                            <TextView
+                                                android:id="@+id/text31223"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_below="@+id/text21223"
+                                                android:layout_marginStart="2dp"
+                                                android:layout_marginTop="3dp"
+                                                android:layout_toEndOf="@+id/img1223"
+                                                android:ellipsize="end"
+                                                android:fontFamily="@font/gilroy_medium"
+                                                android:text="Vidhyadhar Nagar"
+                                                android:textSize="10dp"></TextView>
+
+                                            <TextView
+                                                android:id="@+id/text41223"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_below="@+id/text31223"
+                                                android:layout_alignParentEnd="true"
+                                                android:layout_marginTop="25dp"
+                                                android:ellipsize="end"
+                                                android:fontFamily="@font/gilroy_medium"
+                                                android:text="More Details"
+                                                android:textColor="@android:color/black"
+                                                android:visibility="gone"></TextView>
+                                        </RelativeLayout>
+                                    </androidx.cardview.widget.CardView>
+                                </RelativeLayout>
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="12dp"
+                                android:orientation="vertical">
+
+                                <ImageView
+                                    android:layout_width="160dp"
+                                    android:layout_height="150dp"
+                                    android:scaleType="center"
+                                    android:src="@drawable/cardlogo2"></ImageView>
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="88dp">
+
+                                    <androidx.cardview.widget.CardView
+                                        android:layout_width="152dp"
+                                        android:layout_height="80dp"
+                                        android:layout_marginStart="4dp"
+                                        android:layout_marginEnd="4dp"
+                                        android:layout_marginBottom="10dp"
+                                        app:cardCornerRadius="4dp"
+                                        app:cardElevation="6dp">
+
+                                        <RelativeLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_margin="10dp">
+
+                                            <TextView
+                                                android:id="@+id/text11221"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:fontFamily="@font/gilroy_bold"
+                                                android:text="Rs. 50,000"
+                                                android:textColor="@android:color/black"></TextView>
+
+                                            <TextView
+                                                android:id="@+id/text21221"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_below="@+id/text11221"
+                                                android:ellipsize="end"
+                                                android:fontFamily="@font/gilroy_medium"
+                                                android:text="100 sq ft"
+                                                android:textColor="@color/black"></TextView>
+
+                                            <ImageView
+                                                android:id="@+id/img1221"
+                                                android:layout_width="12dp"
+                                                android:layout_height="12dp"
+                                                android:layout_below="@+id/text21221"
+                                                android:layout_marginStart="-3dp"
+                                                android:layout_marginTop="5dp"
+                                                android:tint="@color/yellow"
+                                                app:srcCompat="@drawable/room"></ImageView>
+
+                                            <TextView
+                                                android:id="@+id/text31221"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_below="@+id/text21221"
+                                                android:layout_marginStart="2dp"
+                                                android:layout_marginTop="3dp"
+                                                android:layout_toEndOf="@+id/img1221"
+                                                android:ellipsize="end"
+                                                android:fontFamily="@font/gilroy_medium"
+                                                android:text="Ram Vihar Colony"
+                                                android:textSize="10dp"></TextView>
+
+                                            <TextView
+                                                android:id="@+id/text41221"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_below="@+id/text31221"
+                                                android:layout_alignParentEnd="true"
+                                                android:layout_marginTop="25dp"
+                                                android:ellipsize="end"
+                                                android:fontFamily="@font/gilroy_medium"
+                                                android:text="More Details"
+                                                android:textColor="@android:color/black"
+                                                android:visibility="gone"></TextView>
+                                        </RelativeLayout>
+                                    </androidx.cardview.widget.CardView>
+                                </RelativeLayout>
+                            </RelativeLayout>
+                        </LinearLayout>
+
+                    </HorizontalScrollView>
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.bottomappbar.BottomAppBar
+            android:id="@+id/bottom_app_bar"
+            style="@style/NavButton"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_gravity="bottom"
+            android:forceHasOverlappingRendering="true"
+            android:gravity="center"
+            app:backgroundTint="@color/colorAccent"
+            app:fabAlignmentMode="center"
+            app:hideOnScroll="true"
+            app:layout_scrollFlags="scroll|enterAlways"
+            app:menu="@menu/popup_menu"
+            app:navigationIcon="@drawable/notifications" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/colorPrimary"
+            android:tint="@color/white"
+            app:layout_anchor="@id/bottom_app_bar"
+            app:layout_anchorGravity="center_horizontal"
+            app:srcCompat="@drawable/phonecall" />
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</RelativeLayout>
